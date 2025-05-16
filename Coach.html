@@ -1,0 +1,254 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Stamina Fitness - Active Coaches
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#E3E5E0] min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-6xl w-full bg-[#E3E5E0] rounded-2xl shadow-md flex overflow-hidden" style="min-height: 600px;">
+   <!-- Sidebar -->
+   <aside class="bg-[#1B1B5A] w-56 flex flex-col justify-between rounded-l-2xl py-8 px-6">
+    <div>
+     <div class="flex flex-col items-center mb-10">
+      <div class="bg-[#E3E5E0] rounded-full w-14 h-14 flex items-center justify-center mb-2">
+       <i class="fas fa-user-circle text-[#1B1B5A] text-4xl">
+       </i>
+      </div>
+      <p class="text-white font-semibold text-sm leading-tight text-center">
+       Administrator Name
+      </p>
+      <p class="text-[#D9D9D9] text-xs mt-1 text-center leading-tight">
+       juan.delacruz@gmail.com
+      </p>
+     </div>
+     <nav class="flex flex-col space-y-4 text-[#D9D9D9] text-xs font-normal">
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-window-restore text-lg">
+       </i>
+       <span>
+        Dashboard
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-home text-lg">
+       </i>
+       <span>
+        Admiin Profile
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-pen-square text-lg">
+       </i>
+       <span>
+        Registration
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-list-alt text-lg">
+       </i>
+       <span>
+        Plan
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-credit-card text-lg">
+       </i>
+       <span>
+        Payment
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-archive text-lg">
+       </i>
+       <span>
+        Inventory
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-users text-lg">
+       </i>
+       <span>
+        View Members
+       </span>
+      </a>
+      <a aria-current="page" class="flex items-center space-x-3 bg-[#E3E5E0] text-[#1B1B5A] font-semibold rounded-r-full px-4 py-2" href="#">
+       <i class="fas fa-wrench text-lg">
+       </i>
+       <span>
+        Coaches
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="/gym/report.html">
+       <i class="far fa-book-open text-lg">
+       </i>
+       <span>
+        Report
+       </span>
+      </a>
+     </nav>
+    </div>
+    <div class="flex items-center space-x-2 text-[#D9D9D9] text-xs">
+     <i class="fas fa-sign-out-alt text-lg">
+     </i>
+     <span>
+      Logout
+     </span>
+    </div>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 p-8">
+    <header class="flex items-center justify-between mb-10">
+     <div class="flex items-center space-x-4">
+      <img alt="Stamina Fitness logo with muscular arm and text Stamina Fitness" class="w-20 h-auto" height="40" src="/gym/Main Logo.png" width="80"/>
+     </div>
+     <div class="flex items-center space-x-6 text-[#1B1B5A] font-normal text-sm">
+      <span>
+       Feedback
+      </span>
+      <button aria-label="Notifications" class="relative">
+       <i class="fas fa-bell text-[#1B1B5A] text-lg">
+       </i>
+      </button>
+     </div>
+    </header>
+    <h1 class="text-[#1B1B5A] font-extrabold text-2xl mb-6 tracking-wide" style="letter-spacing: 0.03em;">
+     Active Coaches
+    </h1>
+    <button class="bg-white text-[#1B1B5A] font-extrabold rounded-full px-5 py-2 shadow-md mb-6 hover:shadow-lg transition-shadow">
+     Add Coach
+    </button>
+    <section class="bg-[#7B7B9A] rounded-xl p-6 max-w-4xl shadow-lg text-[#E3E5E0]">
+     <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+      <h2 class="font-bold text-lg mb-4 md:mb-0">
+       Manage Coaches
+      </h2>
+      <div class="flex items-center space-x-4">
+       <label class="text-xs font-normal select-none" for="show-entities">
+        Show Entities
+       </label>
+       <select class="bg-[#6B6B8A] rounded-full text-xs py-1 px-3 focus:outline-none" id="show-entities">
+        <option>
+         10
+        </option>
+        <option>
+         20
+        </option>
+        <option>
+         50
+        </option>
+       </select>
+       <div class="relative">
+        <input class="bg-[#6B6B8A] rounded-full text-xs py-1 px-4 pr-10 focus:outline-none" placeholder="Search" type="text"/>
+        <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-[#E3E5E0] text-xs">
+        </i>
+       </div>
+      </div>
+     </div>
+     <table class="w-full text-xs">
+      <thead>
+       <tr class="border-b border-[#9999B3]">
+        <th class="text-left py-2 font-semibold flex items-center space-x-1">
+         <i class="fas fa-sort text-sm">
+         </i>
+         <span>
+          Name
+         </span>
+        </th>
+        <th class="text-left py-2 font-semibold">
+         Coach ID
+        </th>
+        <th class="text-left py-2 font-semibold">
+         Contact
+        </th>
+        <th class="text-left py-2 font-semibold">
+         Date Expiration
+        </th>
+        <th class="text-left py-2 font-semibold">
+         Actions
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="py-2">
+         Coach 1
+        </td>
+        <td class="py-2">
+         SFM2301N1
+        </td>
+        <td class="py-2">
+         Jan 11
+        </td>
+        <td class="py-2">
+         Feb 11
+        </td>
+        <td class="py-2">
+         <button class="bg-white text-[#1B1B5A] text-[10px] rounded-full px-3 py-1">
+          Edit
+         </button>
+        </td>
+       </tr>
+       <tr>
+        <td class="py-2">
+         Coach 2
+        </td>
+        <td class="py-2">
+         SFM2301N2
+        </td>
+        <td class="py-2">
+         Jan 11
+        </td>
+        <td class="py-2">
+         Feb 11
+        </td>
+        <td class="py-2">
+         <button class="bg-white text-[#1B1B5A] text-[10px] rounded-full px-3 py-1">
+          Edit
+         </button>
+        </td>
+       </tr>
+       <tr>
+        <td class="py-2">
+         Coach 3
+        </td>
+        <td class="py-2">
+         SFM2301N3
+        </td>
+        <td class="py-2">
+         Jan 11
+        </td>
+        <td class="py-2">
+         Feb 11
+        </td>
+        <td class="py-2">
+         <button class="bg-white text-[#1B1B5A] text-[10px] rounded-full px-3 py-1">
+          Edit
+         </button>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="flex justify-end mt-6 space-x-2">
+      <button class="bg-[#4A4A5A] text-[#2B2B3B] rounded-md px-3 py-1 text-xs cursor-not-allowed" disabled="">
+       Previous
+      </button>
+      <button class="bg-[#4A4A5A] text-[#2B2B3B] rounded-md px-3 py-1 text-xs cursor-not-allowed" disabled="">
+       Next
+      </button>
+     </div>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>

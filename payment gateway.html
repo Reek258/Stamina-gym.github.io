@@ -1,0 +1,109 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Payment Method
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom focus ring for radio inputs */
+    input[type="radio"]:focus-visible + label > span {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-black font-sans px-4 py-6 max-w-md mx-auto">
+  <form class="space-y-6 pb-28">
+   <div class="flex items-center justify-between mb-4">
+    <h2 class="font-semibold text-base leading-5 flex items-center space-x-2">
+     <span>
+      Payment Method
+     </span>
+     <img alt="Payment methods icon of a lock and credit card" class="w-5 h-5 object-contain" draggable="false" height="20" src="https://storage.googleapis.com/a1aa/image/fc55599c-2a4d-493f-3992-9928bb3c98ab.jpg" width="20"/>
+    </h2>
+    <div class="flex items-center space-x-1 text-gray-600 text-sm">
+     <i class="fas fa-lock">
+     </i>
+     <span>
+      Secure
+     </span>
+    </div>
+   </div>
+   <!-- PayPal -->
+   <div class="flex items-center space-x-3">
+    <input class="w-4 h-4 border-gray-400 text-black focus:ring-0" id="paypal" name="payment" type="radio"/>
+    <label class="flex items-center space-x-3 cursor-pointer select-none" for="paypal">
+     <img alt="PayPal logo with blue text on white background" class="w-16 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/04a2d7f1-f9a8-4590-0e91-42c4335db83d.jpg" width="64"/>
+     <span class="font-semibold text-sm leading-5">
+      Pay with PayPal
+     </span>
+    </label>
+   </div>
+   <hr class="border-t border-gray-300 my-4"/>
+   <!-- Klarna -->
+   <div class="flex items-center space-x-3">
+    <input class="w-4 h-4 border-gray-400 text-black focus:ring-0" id="klarna" name="payment" type="radio"/>
+    <label class="flex items-center space-x-3 cursor-pointer select-none" for="klarna">
+     <img alt="Klarna logo black text on pink background" class="w-16 h-6 object-contain bg-pink-300" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/50ce69eb-b27c-4590-bbb8-088b86322091.jpg" width="64"/>
+     <span class="text-sm leading-5">
+      Pay with 4 interest-free payments of $5.44
+     </span>
+    </label>
+   </div>
+   <hr class="border-t border-gray-300 my-4"/>
+   <!-- Afterpay -->
+   <div class="flex items-center space-x-3">
+    <input class="w-4 h-4 border-gray-400 text-black focus:ring-0" id="afterpay" name="payment" type="radio"/>
+    <label class="flex items-center space-x-3 cursor-pointer select-none" for="afterpay">
+     <img alt="Afterpay logo dark teal text on light teal background" class="w-16 h-6 object-contain bg-teal-200" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/8ae63a3b-23c4-4915-299e-b42b6ed1a8ea.jpg" width="64"/>
+     <span class="text-sm leading-5">
+      Pay with 4 interest-free payments of $5.44
+     </span>
+    </label>
+   </div>
+   <hr class="border-t border-gray-300 my-4"/>
+   <!-- Credit/Debit Card -->
+   <div class="flex items-center space-x-3">
+    <input checked="" class="w-4 h-4 border-gray-400 text-black focus:ring-0" id="card" name="payment" type="radio"/>
+    <label class="cursor-pointer select-none font-semibold text-sm leading-5 flex items-center space-x-2" for="card">
+     <span>
+      Pay with credit or debit card
+     </span>
+     <img alt="Credit card icon" class="w-5 h-5 object-contain" draggable="false" height="20" src="https://storage.googleapis.com/a1aa/image/73c8d012-c98f-4f78-7b47-d3a044c2e711.jpg" width="20"/>
+    </label>
+   </div>
+   <!-- Card logos -->
+   <div class="flex items-center space-x-2 mt-3 mb-4">
+    <img alt="SEPHORA logo black text on white background" class="w-20 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/6683290a-1e89-42af-380c-3e1aac0b8165.jpg" width="80"/>
+    <img alt="VISA logo white text on dark blue background" class="w-14 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/133797a8-d467-4c42-b124-a697f11e8eff.jpg" width="56"/>
+    <img alt="Mastercard logo white text on red background" class="w-14 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/24a4a00e-a9c6-4338-8421-606ae8fe9984.jpg" width="56"/>
+    <img alt="American Express logo white text on blue background" class="w-14 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/08fa9197-64ab-4888-24b2-2a8c067f728c.jpg" width="56"/>
+    <img alt="Discover logo black text on orange background" class="w-16 h-6 object-contain" draggable="false" height="24" src="https://storage.googleapis.com/a1aa/image/ab44a209-6502-4b63-6c83-a8945ca270b6.jpg" width="64"/>
+   </div>
+   <!-- Card Number -->
+   <input autocomplete="cc-number" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-black" inputmode="numeric" maxlength="19" pattern="[0-9\s]{13,19}" placeholder="Card Number*" required="" type="text"/>
+   <!-- MM, YY, CVV -->
+   <div class="flex space-x-3 mt-3">
+    <input autocomplete="cc-exp-month" class="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-black" maxlength="2" pattern="\d{2}" placeholder="MM*" required="" type="text"/>
+    <input autocomplete="cc-exp-year" class="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-black" maxlength="2" pattern="\d{2}" placeholder="YY*" required="" type="text"/>
+    <div class="flex-1 relative">
+     <input autocomplete="cc-csc" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-black pr-8" maxlength="4" pattern="\d{3,4}" placeholder="CVV/CVC*" required="" type="text"/>
+     <i aria-label="Information about CVV/CVC" class="fas fa-info-circle absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm" title="The 3 or 4 digit code on the back of your card">
+     </i>
+    </div>
+   </div>
+   <!-- First Name -->
+   <input autocomplete="given-name" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 mt-3 focus:outline-none focus:ring-1 focus:ring-black" placeholder="First Name*" required="" type="text"/>
+   <!-- Last Name -->
+   <input autocomplete="family-name" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 mt-2 focus:outline-none focus:ring-1 focus:ring-black" placeholder="Last Name*" readonly="" required="" type="text" value="••••"/>
+   
+  <!-- Place Order button -->
+  <button class="fixed bottom-12 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-md mx-auto bg-blue-300 text-gray-600 font-semibold text-sm leading-5 py-2 rounded-md cursor-not-allowed" disabled="" type="submit">
+   Purchase Plan
+  </button>
+ </body>
+</html>

@@ -1,0 +1,189 @@
+ <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Stamina Fitness Registration
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#e6e8e3] flex justify-center items-center min-h-screen p-4">
+  <div class="flex rounded-2xl shadow-lg max-w-5xl w-full overflow-hidden" style="min-height: 600px">
+   <!-- Sidebar -->
+   <aside class="bg-[#1b1c5a] w-64 flex flex-col justify-between rounded-l-2xl">
+    <div>
+     <div class="flex flex-col items-center py-10 px-6">
+      <div class="bg-[#e6e8e3] rounded-full w-14 h-14 flex justify-center items-center mb-3">
+       <i class="fas fa-user-circle text-[#1b1c5a] text-4xl">
+       </i>
+      </div>
+      <p class="text-white font-semibold text-sm leading-tight">
+       Administrator Name
+      </p>
+      <p class="text-[#cbd0d0] text-xs mt-1 leading-tight">
+       juan.delacruz@gmail.com
+      </p>
+     </div>
+     <nav class="flex flex-col space-y-4 px-6">
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="far fa-chart-bar text-lg w-5">
+       </i>
+       <span>
+        Dashboard
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="fas fa-home text-lg w-5">
+       </i>
+       <span>
+        Admiin Profile
+       </span>
+      </a>
+      <a class="flex items-center bg-[#e6e8e3] rounded-md text-[#1b1c5a] font-semibold text-xs space-x-3 py-2 px-3" href="/gym/admin information.html">
+       <i class="far fa-edit text-base w-5">
+       </i>
+       <span>
+        Registration
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="/gym/plan.html">
+       <i class="far fa-list-alt text-lg w-5">
+       </i>
+       <span>
+        Plan
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="/gym/plan.html">
+       <i class="far fa-credit-card text-lg w-5">
+       </i>
+       <span>
+        Payment
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="far fa-box text-lg w-5">
+       </i>
+       <span>
+        Inventory
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="fas fa-users text-lg w-5">
+       </i>
+       <span>
+        View Members
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="fas fa-wrench text-lg w-5">
+       </i>
+       <span>
+        Coaches
+       </span>
+      </a>
+      <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+       <i class="far fa-book-open text-lg w-5">
+       </i>
+       <span>
+        Report
+       </span>
+      </a>
+     </nav>
+    </div>
+    <div class="px-6 py-4">
+     <a class="flex items-center text-[#cbd0d0] text-xs space-x-3 hover:text-white" href="#">
+      <i class="far fa-folder-open text-lg w-5">
+      </i>
+      <span>
+       Logout
+      </span>
+     </a>
+    </div>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 p-10 rounded-r-2xl relative">
+    <header class="flex justify-between items-center mb-10">
+     <div class="flex items-center space-x-3">
+      <img alt="Stamina Fitness logo with muscular arm and text" class="w-14 h-14 object-contain" height="60" src="/gym/Main Logo.png" width="60"/>
+      <h1 class="text-[#1b1c5a] font-extrabold text-lg tracking-wide uppercase">
+       STAMINA
+       <br/>
+       FITNESS
+      </h1>
+     </div>
+     <div class="flex items-center space-x-6 text-[#1b1c5a] text-sm font-normal">
+      <span>
+       Feedback
+      </span>
+      <i class="fas fa-bell text-lg cursor-pointer">
+      </i>
+     </div>
+    </header>
+    <section>
+     <h2 class="text-[#d9b94a] font-extrabold text-xl mb-1">
+      Become a Member!
+     </h2>
+     <h3 class="text-[#1b1c5a] font-extrabold text-3xl mb-8">
+      Register
+     </h3>
+     <form autocomplete="off" class="bg-white rounded-xl shadow-md p-8 max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+      <div class="flex flex-col">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="participant">
+        Name of Participant
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="participant" placeholder=" " type="text"/>
+      </div>
+      <div class="flex flex-col relative">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="datejoin">
+        Date of Join
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-10 pr-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="datejoin" placeholder=" " type="text"/>
+       <i class="far fa-calendar-alt absolute right-3 top-[38px] text-[#1b1c5a] text-base pointer-events-none">
+       </i>
+      </div>
+      <div class="flex flex-col">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="email">
+        Email Address
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="email" placeholder=" " type="email"/>
+      </div>
+      <div class="flex flex-col">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="contact">
+        Contact No.
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="contact" placeholder=" " type="tel"/>
+      </div>
+      <div class="flex flex-col max-w-[140px]">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="plan">
+        Plan
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="plan" placeholder=" " type="text"/>
+      </div>
+      <div class="flex flex-col max-w-[140px]">
+       <label class="text-[#1b1c5a] font-semibold text-sm mb-2" for="price">
+        Price
+       </label>
+       <input class="bg-[#e6e8e3] rounded-md h-10 px-4 text-[#1b1c5a] placeholder-[#a3a3a3] focus:outline-none" id="price" placeholder=" " type="text"/>
+      </div>
+      <div class="col-span-full flex justify-end space-x-4 mt-6">
+       <button class="bg-[#1b1c5a] text-white font-semibold text-sm rounded-md px-6 py-2 hover:bg-[#15164a] transition" type="submit">
+        Avail Membership
+       </button>
+       <button class="border border-[#1b1c5a] text-[#1b1c5a] font-normal text-sm rounded-md px-6 py-2 hover:bg-[#e6e8e3] transition" type="button">
+        Cancel
+       </button>
+      </div>
+     </form>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>

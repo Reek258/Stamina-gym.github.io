@@ -1,0 +1,266 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Stamina Fitness Inventory
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#e4e5df] min-h-screen flex items-center justify-center p-6">
+  <div class="flex rounded-2xl shadow-lg max-w-7xl w-full overflow-hidden" style="min-height: 600px">
+   <!-- Sidebar -->
+   <aside class="bg-[#1b1b5a] w-64 flex flex-col justify-between p-6 rounded-l-2xl">
+    <div>
+     <div class="flex flex-col items-center mb-10">
+      <div class="bg-[#e4e5df] rounded-full w-14 h-14 flex items-center justify-center mb-3">
+       <i class="fas fa-user-circle text-[#1b1b5a] text-4xl">
+       </i>
+      </div>
+      <p class="text-white font-bold text-sm leading-tight">
+       Administrator Name
+      </p>
+      <p class="text-[#c7c7c7] text-xs mt-1">
+       juan.delacruz@gmail.com
+      </p>
+     </div>
+     <nav class="flex flex-col space-y-5 text-[#c7c7c7] text-xs">
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-window-restore text-lg">
+       </i>
+       <span>
+        Dashboard
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-home text-lg">
+       </i>
+       <span>
+        Admiin Profile
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-edit text-lg">
+       </i>
+       <span>
+        Registration
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-list-alt text-lg">
+       </i>
+       <span>
+        Plan
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-credit-card text-lg">
+       </i>
+       <span>
+        Payment
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 bg-[#e4e5df] text-[#1b1b5a] rounded-md px-3 py-2 font-semibold" href="#">
+       <i class="fas fa-box-open text-lg">
+       </i>
+       <span>
+        Inventory
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="/gym/view members.html">
+       <i class="fas fa-users text-lg">
+       </i>
+       <span>
+        View Members
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="fas fa-wrench text-lg">
+       </i>
+       <span>
+        Coaches
+       </span>
+      </a>
+      <a class="flex items-center space-x-3 hover:text-white transition-colors" href="#">
+       <i class="far fa-book-open text-lg">
+       </i>
+       <span>
+        Report
+       </span>
+      </a>
+     </nav>
+    </div>
+    <div>
+     <a class="flex items-center space-x-3 text-[#c7c7c7] text-xs hover:text-white transition-colors" href="#">
+      <i class="fas fa-sign-out-alt text-lg">
+      </i>
+      <span>
+       Logout
+      </span>
+     </a>
+    </div>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 p-8 relative rounded-r-2xl">
+    <header class="flex items-center justify-between mb-8">
+     <div class="flex items-center space-x-4">
+      <img alt="Stamina Fitness logo with muscular arm and text Stamina Fitness" class="w-20 h-auto object-contain" height="50" src="/gym/Main Logo.png" width="80"/>
+      <h1 class="text-[#1b1b5a] font-extrabold text-xl leading-tight uppercase">
+       STAMINA
+       <br/>
+       FITNESS
+      </h1>
+     </div>
+     <div class="flex items-center space-x-6 text-[#1b1b5a] text-sm font-normal">
+      <span>
+       Feedback
+      </span>
+      <i class="fas fa-bell text-lg cursor-pointer">
+      </i>
+     </div>
+    </header>
+    <button class="mb-6 bg-white text-[#1b1b5a] font-bold rounded-full px-5 py-2 shadow-md hover:shadow-lg transition-shadow">
+     Add Equipment
+    </button>
+    <section class="bg-[#7a7a9f] rounded-xl p-6 max-w-4xl shadow-md text-white">
+     <h2 class="font-extrabold text-lg mb-4 text-[#f3f0d7]">
+      Manage Equipments
+     </h2>
+     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4">
+      <div class="flex items-center space-x-2 text-[#f3f0d7] text-sm font-semibold">
+       <label class="select-none" for="showEntities">
+        Show Entities
+       </label>
+       <select class="bg-[#5f5f8a] rounded-md px-2 py-1 text-[#f3f0d7] text-sm font-semibold focus:outline-none" id="showEntities">
+        <option>
+         10
+        </option>
+        <option>
+         20
+        </option>
+        <option>
+         30
+        </option>
+       </select>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="bg-[#5f5f8a] rounded-full px-4 py-2 text-[#f3f0d7] text-sm font-semibold placeholder-[#d1d1d1] focus:outline-none" placeholder="Search" type="text"/>
+       <button aria-label="Search" class="bg-[#5f5f8a] rounded-full p-2 flex items-center justify-center">
+        <i class="fas fa-search text-[#f3f0d7]">
+        </i>
+       </button>
+      </div>
+     </div>
+     <table class="w-full text-sm">
+      <thead>
+       <tr class="text-[#f3f0d7] font-semibold text-left">
+        <th class="cursor-pointer select-none flex items-center space-x-1">
+         <span>
+          Equipment Name
+         </span>
+         <i class="fas fa-sort-alt text-xs">
+         </i>
+        </th>
+        <th class="cursor-default select-none text-center">
+         Total no.
+        </th>
+        <th class="cursor-pointer select-none flex items-center space-x-1 text-center">
+         <span>
+          Status
+         </span>
+         <i class="fas fa-sort-alt text-xs">
+         </i>
+        </th>
+        <th class="cursor-default select-none text-center">
+         Actions
+        </th>
+       </tr>
+      </thead>
+      <tbody class="text-[#f3f0d7]">
+       <tr class="border-b border-[#6a6a8a]">
+        <td class="py-2">
+         Treadmill
+        </td>
+        <td class="py-2 text-center">
+         1
+        </td>
+        <td class="py-2 text-center">
+         Active
+        </td>
+        <td class="py-2 text-center">
+         <button class="bg-white text-[#1b1b5a] rounded-full px-3 py-1 text-xs font-semibold">
+          Edit
+         </button>
+        </td>
+       </tr>
+       <tr class="border-b border-[#6a6a8a]">
+        <td class="py-2">
+         10 lbs Dumbell
+        </td>
+        <td class="py-2 text-center">
+         3
+        </td>
+        <td class="py-2 text-center">
+         Inactive
+        </td>
+        <td class="py-2 text-center">
+         <button class="bg-white text-[#1b1b5a] rounded-full px-3 py-1 text-xs font-semibold">
+          Edit
+         </button>
+        </td>
+       </tr>
+       <tr class="border-b border-[#6a6a8a]">
+        <td class="py-2">
+         15 lbs Dumbell
+        </td>
+        <td class="py-2 text-center">
+         6
+        </td>
+        <td class="py-2 text-center">
+         Active
+        </td>
+        <td class="py-2 text-center">
+         <button class="bg-white text-[#1b1b5a] rounded-full px-3 py-1 text-xs font-semibold">
+          Edit
+         </button>
+        </td>
+       </tr>
+       <tr>
+        <td class="py-2">
+         20 lbs Dumbell
+        </td>
+        <td class="py-2 text-center">
+         12
+        </td>
+        <td class="py-2 text-center">
+         Active
+        </td>
+        <td class="py-2 text-center">
+         <button class="bg-white text-[#1b1b5a] rounded-full px-3 py-1 text-xs font-semibold">
+          Edit
+         </button>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="flex justify-end mt-6 space-x-3 text-xs font-semibold text-[#3a3a4a]">
+      <button class="bg-[#5f5f8a] rounded-md px-3 py-1 cursor-not-allowed select-none" disabled="">
+       Previous
+      </button>
+      <button class="bg-[#5f5f8a] rounded-md px-3 py-1 cursor-not-allowed select-none" disabled="">
+       Next
+      </button>
+     </div>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>
